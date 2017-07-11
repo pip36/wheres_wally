@@ -1,0 +1,38 @@
+#game-canvas{
+  border: 1px solid black;
+}
+
+#container{
+  position:relative;
+  border: 3px solid blue;
+}
+
+.game-picture{
+  position: absolute;
+  z-index: -1;
+}
+
+.selector-circle{
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 50%;
+  width:10px;
+  height: 10px;
+  transition: transform 0.5s;
+  box-shadow: 0px 0px 5px red;
+  opacity: 0.8;
+}
+
+.scale{
+  transform: scale(8,8);
+}
+
+.notify-box{
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 10%;
+  background-color: cornflowerblue;
+  width: 160px;
+  height: 60px;
+  opacity: 0.9;
+}
