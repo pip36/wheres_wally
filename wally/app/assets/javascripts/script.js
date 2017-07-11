@@ -8,7 +8,7 @@ $(document).ready(function(){
   var characterPositionY = [];
   var clicked = false;
 
-  $.getJSON("/images/1.json", function(data, posX, posY){
+  $.getJSON(window.location.href + ".json", function(data, posX, posY){
     for(var i = 0; i < data.length; i++){
       characterNames.push(data[i].name);
       characterPositionX.push(data[i].positionX);
@@ -25,6 +25,8 @@ $(document).ready(function(){
             {
               isFound = true;
               $('#container').append("<div class='notify-box' style='left:" + posX + "px; top:" + posY + "px'> You found " + characterNames[i] + "</div>");
+              $('#'+characterNames[i].replace(" ","")).css("opacity", "1");
+              console.log('#'+characterNames[i].replace(" ", ""));
             }
       }
       if (!isFound){
