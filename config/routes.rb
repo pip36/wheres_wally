@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root 'images#index'
   resources :images, only:[:index, :show]
   #resources :scores, only:[:create]
-  post '/images/:id/scores', to: 'scores#create', as: 'score'
+  post '/scores', to: 'scores#create', as: 'score'
 end
