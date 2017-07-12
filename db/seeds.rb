@@ -14,7 +14,7 @@ def addCharacters(imageID, names, positions)
 end
 
 Image.create(title: "The Fighting Foresters", width: 3559, height:2253, src:"TheFightingForesters.jpg");
-Image.create(title: "The Gobbling Gluttons", width: 3559, height:2253, src:"TheGobblingGluttons.jpeg");
+Image.create(title: "The Gobbling Gluttons", width: 3559, height:2253, src:"TheGobblingGluttons.jpg");
 Image.create(title: "The Knights of the Magic Flag", width: 3559, height:2253, src:"TheKnightsOfTheMagicFlag.jpg");
 Image.create(title: "The Underground Hunters", width: 3559, height:2253, src:"TheUndergroundHunters.jpg");
 Image.create(title: "The Unfriendly Giants", width: 3559, height:2253, src:"TheUnfriendlyGiants.jpg");
