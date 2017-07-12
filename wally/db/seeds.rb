@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 def addCharacters(imageID, names, positions)
-  image = Image.find(imageID)
-  (0...names.count).each do |i|
-    image.characters.create(name: names[i], positionX: positions[i][0], positionY: positions[i][1])
+  @image = Image.find(imageID)
+  (0..4).each do |i|
+    @image.characters.create(name: names[i], positionX: positions[i][0], positionY: positions[i][1])
   end
 end
 
