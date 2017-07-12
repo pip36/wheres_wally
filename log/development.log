@@ -9203,3 +9203,155 @@ Processing by ImagesController#show as JSON
 Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (18.8ms)[0m  [1m[35mCREATE TABLE "characters" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "positionX" integer, "positionY" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_id" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE  INDEX "index_characters_on_image_id" ON "characters" ("image_id")[0m
+  [1m[35m (16.0ms)[0m  [1m[35mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "width" integer, "height" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "src" varchar)[0m
+  [1m[35m (15.3ms)[0m  [1m[35mCREATE TABLE "scores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "time" varchar, "image_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE  INDEX "index_scores_on_image_id" ON "scores" ("image_id")[0m
+  [1m[35m (14.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (9.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170712093608)[0m
+  [1m[35m (9.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170711090746),
+(20170710173905),
+(20170710171728),
+(20170711091445),
+(20170711235223);
+
+[0m
+  [1m[35m (16.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-07-12 13:52:24.820838"], ["updated_at", "2017-07-12 13:52:24.820838"]]
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (16.0ms)[0m  [1m[35mCREATE TABLE "characters" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "positionX" integer, "positionY" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_id" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (11.6ms)[0m  [1m[35mCREATE  INDEX "index_characters_on_image_id" ON "characters" ("image_id")[0m
+  [1m[35m (16.3ms)[0m  [1m[35mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "width" integer, "height" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "src" varchar)[0m
+  [1m[35m (17.5ms)[0m  [1m[35mCREATE TABLE "scores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "time" varchar, "image_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE  INDEX "index_scores_on_image_id" ON "scores" ("image_id")[0m
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170712093608)[0m
+  [1m[35m (9.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170711090746),
+(20170710173905),
+(20170710171728),
+(20170711091445),
+(20170711235223);
+
+[0m
+  [1m[35m (13.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-07-12 13:52:24.972135"], ["updated_at", "2017-07-12 13:52:24.972135"]]
+  [1m[35m (16.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.9ms)[0m  [1m[32mINSERT INTO "images" ("title", "width", "height", "created_at", "updated_at", "src") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Fighting Foresters"], ["width", 3559], ["height", 2253], ["created_at", "2017-07-12 13:52:25.021423"], ["updated_at", "2017-07-12 13:52:25.021423"], ["src", "TheFightingForesters.jpg"]]
+  [1m[35m (9.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "images" ("title", "width", "height", "created_at", "updated_at", "src") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Gobbling Gluttons"], ["width", 3559], ["height", 2253], ["created_at", "2017-07-12 13:52:25.039970"], ["updated_at", "2017-07-12 13:52:25.039970"], ["src", "TheGobblingGluttons.jpg"]]
+  [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "images" ("title", "width", "height", "created_at", "updated_at", "src") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Knights of the Magic Flag"], ["width", 3559], ["height", 2253], ["created_at", "2017-07-12 13:52:25.055621"], ["updated_at", "2017-07-12 13:52:25.055621"], ["src", "TheKnightsOfTheMagicFlag.jpg"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "images" ("title", "width", "height", "created_at", "updated_at", "src") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Underground Hunters"], ["width", 3559], ["height", 2253], ["created_at", "2017-07-12 13:52:25.069896"], ["updated_at", "2017-07-12 13:52:25.069896"], ["src", "TheUndergroundHunters.jpg"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "images" ("title", "width", "height", "created_at", "updated_at", "src") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Unfriendly Giants"], ["width", 3559], ["height", 2253], ["created_at", "2017-07-12 13:52:25.083391"], ["updated_at", "2017-07-12 13:52:25.083391"], ["src", "TheUnfriendlyGiants.jpg"]]
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Wally"], ["positionX", 2213], ["positionY", 758], ["created_at", "2017-07-12 13:52:25.133025"], ["updated_at", "2017-07-12 13:52:25.133025"], ["image_id", 1]]
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Wenda"], ["positionX", 1459], ["positionY", 1647], ["created_at", "2017-07-12 13:52:25.150712"], ["updated_at", "2017-07-12 13:52:25.150712"], ["image_id", 1]]
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Wizard Whitebeard"], ["positionX", 3372], ["positionY", 704], ["created_at", "2017-07-12 13:52:25.167690"], ["updated_at", "2017-07-12 13:52:25.167690"], ["image_id", 1]]
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Woof"], ["positionX", 309], ["positionY", 1916], ["created_at", "2017-07-12 13:52:25.180398"], ["updated_at", "2017-07-12 13:52:25.180398"], ["image_id", 1]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Odlaw"], ["positionX", 2634], ["positionY", 1654], ["created_at", "2017-07-12 13:52:25.197709"], ["updated_at", "2017-07-12 13:52:25.197709"], ["image_id", 1]]
+  [1m[35m (9.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Wally"], ["positionX", 1600], ["positionY", 622], ["created_at", "2017-07-12 13:52:25.212588"], ["updated_at", "2017-07-12 13:52:25.212588"], ["image_id", 2]]
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Wenda"], ["positionX", 1097], ["positionY", 587], ["created_at", "2017-07-12 13:52:25.226640"], ["updated_at", "2017-07-12 13:52:25.226640"], ["image_id", 2]]
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Wizard Whitebeard"], ["positionX", 2381], ["positionY", 1504], ["created_at", "2017-07-12 13:52:25.242074"], ["updated_at", "2017-07-12 13:52:25.242074"], ["image_id", 2]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Woof"], ["positionX", 1918], ["positionY", 1089], ["created_at", "2017-07-12 13:52:25.254937"], ["updated_at", "2017-07-12 13:52:25.254937"], ["image_id", 2]]
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Odlaw"], ["positionX", 1133], ["positionY", 1068], ["created_at", "2017-07-12 13:52:25.267781"], ["updated_at", "2017-07-12 13:52:25.267781"], ["image_id", 2]]
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Wally"], ["positionX", 860], ["positionY", 1561], ["created_at", "2017-07-12 13:52:25.286439"], ["updated_at", "2017-07-12 13:52:25.286439"], ["image_id", 3]]
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Wenda"], ["positionX", 2930], ["positionY", 1605], ["created_at", "2017-07-12 13:52:25.301816"], ["updated_at", "2017-07-12 13:52:25.301816"], ["image_id", 3]]
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Wizard Whitebeard"], ["positionX", 1604], ["positionY", 200], ["created_at", "2017-07-12 13:52:25.317642"], ["updated_at", "2017-07-12 13:52:25.317642"], ["image_id", 3]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Woof"], ["positionX", 2615], ["positionY", 725], ["created_at", "2017-07-12 13:52:25.332513"], ["updated_at", "2017-07-12 13:52:25.332513"], ["image_id", 3]]
+  [1m[35m (14.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Odlaw"], ["positionX", 244], ["positionY", 1708], ["created_at", "2017-07-12 13:52:25.350249"], ["updated_at", "2017-07-12 13:52:25.350249"], ["image_id", 3]]
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Wally"], ["positionX", 3083], ["positionY", 912], ["created_at", "2017-07-12 13:52:25.364520"], ["updated_at", "2017-07-12 13:52:25.364520"], ["image_id", 4]]
+  [1m[35m (194.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Wenda"], ["positionX", 2519], ["positionY", 110], ["created_at", "2017-07-12 13:52:25.563794"], ["updated_at", "2017-07-12 13:52:25.563794"], ["image_id", 4]]
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Wizard Whitebeard"], ["positionX", 2260], ["positionY", 801], ["created_at", "2017-07-12 13:52:25.593099"], ["updated_at", "2017-07-12 13:52:25.593099"], ["image_id", 4]]
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Woof"], ["positionX", 3151], ["positionY", 211], ["created_at", "2017-07-12 13:52:25.611331"], ["updated_at", "2017-07-12 13:52:25.611331"], ["image_id", 4]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Odlaw"], ["positionX", 582], ["positionY", 106], ["created_at", "2017-07-12 13:52:25.623196"], ["updated_at", "2017-07-12 13:52:25.623196"], ["image_id", 4]]
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Wally"], ["positionX", 643], ["positionY", 1497], ["created_at", "2017-07-12 13:52:25.635336"], ["updated_at", "2017-07-12 13:52:25.635336"], ["image_id", 5]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (7.0ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Wenda"], ["positionX", 2467], ["positionY", 1800], ["created_at", "2017-07-12 13:52:25.658992"], ["updated_at", "2017-07-12 13:52:25.658992"], ["image_id", 5]]
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Wizard Whitebeard"], ["positionX", 3419], ["positionY", 1742], ["created_at", "2017-07-12 13:52:25.681758"], ["updated_at", "2017-07-12 13:52:25.681758"], ["image_id", 5]]
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Woof"], ["positionX", 89], ["positionY", 1664], ["created_at", "2017-07-12 13:52:25.693787"], ["updated_at", "2017-07-12 13:52:25.693787"], ["image_id", 5]]
+  [1m[35m (21.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Odlaw"], ["positionX", 2092], ["positionY", 2033], ["created_at", "2017-07-12 13:52:25.718426"], ["updated_at", "2017-07-12 13:52:25.718426"], ["image_id", 5]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
