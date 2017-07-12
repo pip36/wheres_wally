@@ -1,8 +1,25 @@
 <header>
   <h1> Where's Wally </h1>
 </header>
-<div style='margin-top:100px'>
-<% @images.each do |image| %>
-  <%= link_to image.title, image %>
-<% end %>
+<div class='image-select'>
+  <ul class='image-list'>
+    <% @images.each do |image, i| %>
+
+    <li class='image-block'>
+          <%= link_to image do %>
+            <%= image.title %>
+            <span class='link-span'></span>
+          <%end%>
+          <%= image_tag(image.src, class:"preview-picture") %>
+
+
+          <h3> Highscores </h3>
+          <% image.scores.take(5).each do |score| %>
+            <h4> <%= "#{score.name} : #{score.time} seconds!" %> </h4>
+          <% end %>
+
+      </li>
+
+    <% end %>
+  </ul>
 </div

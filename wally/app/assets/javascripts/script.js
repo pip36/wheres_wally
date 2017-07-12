@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).on("turbolinks:load", function(){
   var width = $('.game-picture').width();
   var height = $('.game-picture').height();
   $('#container').css({'width':width, 'height': height});
@@ -6,27 +6,48 @@ $(document).ready(function(){
   var characterNames = [];
   var characterPositionX = [];
   var characterPositionY = [];
+  var startTime = Date.now();
   var clicked = false;
+  var beenFound = [];
+  var imageID;
+  var url = window.location.href
 
+
+if ((url.slice(-1).search(/\d/)) == 0){
   $.getJSON(window.location.href + ".json", function(data, posX, posY){
-    for(var i = 0; i < data.length; i++){
-      characterNames.push(data[i].name);
-      characterPositionX.push(data[i].positionX);
-      characterPositionY.push(data[i].positionY);
+    imageID = data.id;
+    for(var i = 0; i < data.characters.length; i++){
+      characterNames.push(data.characters[i].name);
+      characterPositionX.push(data.characters[i].positionX);
+      characterPositionY.push(data.characters[i].positionY);
+      beenFound.push(false);
     }
-});
+  }
+)};
 
   var checkSelection = function(posX, posY){
     var isFound = false;
       for(var i = 0; i < characterNames.length; i++){
 
         if (((characterPositionX[i] - posX) < 50) && ((characterPositionX[i] - posX) > -50) &&
-            ((characterPositionY[i] - posY) < 50) && ((characterPositionY[i] - posY) > -50))
+            ((characterPositionY[i] - posY) < 50) && ((characterPositionY[i] - posY) > -50) && !beenFound[i])
             {
+              var secs = (Date.now()-startTime)/1000;
               isFound = true;
-              $('#container').append("<div class='notify-box' style='left:" + posX + "px; top:" + posY + "px'> You found " + characterNames[i] + "</div>");
+              beenFound[i] = true;
+              $('#container').append("<div class='notify-box' style='left:" + posX
+              + "px; top:" + posY + "px'> You found " + characterNames[i]
+              + " in "+ secs +" seconds!</div>");
               $('#'+characterNames[i].replace(" ","")).css("opacity", "1");
-              console.log('#'+characterNames[i].replace(" ", ""));
+              if (checkWin()){
+                var finalTime = (Date.now()-startTime)/1000;
+                var playerName = prompt("You found everyone! \n In only " + finalTime + " seconds! \n Enter you name");
+                //send this via json to rails url "score/new
+                //score model name:"phil" score:"float"
+                //resources only:[:new]
+                //controller accept json request and add the data to the database
+                $.post("http://localhost:3000/scores", {name: playerName, time: finalTime, id: imageID}, null, "json");
+              }
             }
       }
       if (!isFound){
@@ -34,6 +55,15 @@ $(document).ready(function(){
           $('.selector-circle').last().fadeOut();
         }, 450);
       }
+  }
+
+  var checkWin = function(){
+    for(var i = 0; i < beenFound.length; i++){
+      if (beenFound[i] == false){
+        return false
+      }
+    }
+    return true
   }
 
   var getMousePosition = function(object, event){

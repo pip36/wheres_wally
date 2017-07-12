@@ -7,10 +7,11 @@ class ImagesController < ApplicationController
   def show
     @image = Image.find(params[:id])
     @characters = @image.characters
+    @id = params[:id]
 
     respond_to do |format|
       format.html
-      format.json {render json: @characters}
+      format.json {render json: {characters: @characters, id: @id}}
     end
   end
 end
