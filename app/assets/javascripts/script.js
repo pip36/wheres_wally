@@ -46,7 +46,7 @@ if ((url.slice(-1).search(/\d/)) == 0){
                 //score model name:"phil" score:"float"
                 //resources only:[:new]
                 //controller accept json request and add the data to the database
-                $.post("https://floating-everglades-97160.herokuapp.com/scores", {name: playerName, time: finalTime, id: imageID}, null, "json");
+                $.post("floating-everglades-97160.herokuapp.com/scores", {name: playerName, time: finalTime, id: imageID}, null, "json");
               }
             }
       }
