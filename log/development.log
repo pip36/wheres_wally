@@ -9355,3 +9355,740 @@ Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "positionX", "positionY", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Odlaw"], ["positionX", 2092], ["positionY", 2033], ["created_at", "2017-07-12 13:52:25.718426"], ["updated_at", "2017-07-12 13:52:25.718426"], ["image_id", 5]]
   [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-07-31 13:53:47 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (2626.1ms)
+Completed 200 OK in 2887ms (Views: 2806.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 13:55:57 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (5.5ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 157ms (Views: 149.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 13:56:22 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 169ms (Views: 167.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 13:56:36 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (4.7ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 117ms (Views: 111.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 13:58:00 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 217ms (Views: 216.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 13:59:07 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 189ms (Views: 188.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:04:42 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (22.6ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (128.7ms)
+Completed 200 OK in 475ms (Views: 425.0ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:06:31 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 138ms (Views: 137.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:06:39 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:07:08 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 139ms (Views: 137.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:11:37 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 114ms (Views: 112.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:11:55 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.8ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 118ms (Views: 116.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:12:16 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.3ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 132ms (Views: 130.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:12:49 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 122ms (Views: 121.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:12:53 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:14:12 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 116ms (Views: 115.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:14:38 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (24.5ms)
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "  margin": expected ";", was ": 0;"):
+    4:     <title>Wally</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:     <%= yield(:head) %>
+   10:   </head>
+  
+app/assets/stylesheets/style.scss:6
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___2701366222804699561_33399260'
+  Rendering /home/phil/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/phil/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/phil/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /home/phil/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/phil/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/phil/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/phil/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.4ms)
+  Rendered /home/phil/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.9ms)
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:14:50 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 177ms (Views: 176.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:15:59 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 131ms (Views: 123.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:16:35 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 124ms (Views: 123.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:18:34 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 121ms (Views: 119.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:20:18 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 111ms (Views: 110.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:20:31 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:20:40 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:20:50 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 63ms (Views: 61.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:20:53 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 40ms (Views: 38.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:21:38 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 123ms (Views: 121.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:21:49 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:26:08 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 163ms (Views: 161.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:26:15 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 59ms (Views: 47.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:26:36 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (3.7ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 54ms (Views: 48.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:26:54 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 94ms (Views: 92.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:30:58 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:42:01 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 114ms (Views: 109.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:42:25 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 133ms (Views: 132.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:42:40 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (1.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 90ms (Views: 87.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:46:25 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 94ms (Views: 92.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:46:41 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.3ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 139ms (Views: 137.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:51:16 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.3ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 90ms (Views: 88.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:51:32 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 261ms (Views: 259.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:51:50 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 55ms (Views: 53.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:55:47 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 56ms (Views: 55.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:56:26 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 142ms (Views: 140.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:56:47 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 113ms (Views: 112.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:57:19 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 113ms (Views: 111.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:58:17 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 103ms (Views: 101.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:58:44 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 154ms (Views: 152.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:59:12 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (6.3ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 127ms (Views: 119.4ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 14:59:37 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (4.6ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 111ms (Views: 105.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 15:00:04 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 96ms (Views: 94.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 15:00:47 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 145ms (Views: 143.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 15:01:02 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 106ms (Views: 104.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 15:01:57 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (4.6ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 114ms (Views: 108.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 15:02:14 +0100
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 51ms (Views: 49.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-31 15:04:58 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ImagesController#index as HTML
+  Rendering images/index.html.erb within layouts/application
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 1], ["LIMIT", 5]]
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 2], ["LIMIT", 5]]
+  [1m[36mScore Load (0.0ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 3], ["LIMIT", 5]]
+  [1m[36mScore Load (0.0ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 4], ["LIMIT", 5]]
+  [1m[36mScore Load (0.0ms)[0m  [1m[34mSELECT  "scores".* FROM "scores" WHERE "scores"."image_id" = ? ORDER BY "scores"."time" ASC LIMIT ?[0m  [["image_id", 5], ["LIMIT", 5]]
+  Rendered images/index.html.erb within layouts/application (1674.4ms)
+Completed 200 OK in 1799ms (Views: 1769.7ms | ActiveRecord: 0.9ms)
+
+
