@@ -4,5 +4,5 @@ class Score < ApplicationRecord
   validates :name, presence: true
   validates :time, presence: true
 
-  default_scope {order(time: :asc)}
+  default_scope {order('time ASC')}
 end
