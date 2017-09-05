@@ -26,3 +26,11 @@ addCharacters(2, @names, [[1600,622],[1097,587],[2381,1504],[1918,1089],[1133,10
 addCharacters(3, @names, [[860,1561],[2930,1605],[1604,200],[2615,725],[244,1708]]);
 addCharacters(4, @names, [[3083,912],[2519,110],[2260,801],[3151,211],[582,106]]);
 addCharacters(5, @names, [[643,1497],[2467,1800],[3419,1742],[89,1664],[2092,2033]]);
+
+@images = Image.all
+@images.each do |image|
+  20.times do
+    r = Random.new
+    image.scores.create(name:"test", time: r.rand(2000.00))
+  end
+end

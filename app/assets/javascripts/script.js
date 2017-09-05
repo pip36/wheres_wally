@@ -40,7 +40,7 @@ if ((url.slice(-1).search(/\d/)) == 0){
               + " in "+ secs +" seconds!</div>");
               $('#'+characterNames[i].replace(" ","")).css("opacity", "1");
               if (checkWin()){
-                var finalTime = (Date.now()-startTime)/1000;
+                var finalTime = parseFloat((Date.now()-startTime)/1000);
                 var playerName = prompt("You found everyone! \n In only " + finalTime + " seconds! \n Enter you name");
                 //send this via json to rails url "score/new
                 //score model name:"phil" score:"float"
