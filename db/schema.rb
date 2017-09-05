@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170905222358) do
+ActiveRecord::Schema.define(version: 20170905215952) do
 
   create_table "characters", force: :cascade do |t|
     t.string   "name"
@@ -33,10 +33,10 @@ ActiveRecord::Schema.define(version: 20170905222358) do
 
   create_table "scores", force: :cascade do |t|
     t.string   "name"
+    t.float    "time"
     t.integer  "image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.float    "time"
     t.index ["image_id"], name: "index_scores_on_image_id"
   end
 
