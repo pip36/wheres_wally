@@ -1,5 +1,5 @@
 # Where's Wally
-**[Play it Now](https://floating-everglades-97160.herokuapp.com/)** 
+**[Play it Now](https://floating-everglades-97160.herokuapp.com/)** (Heroku dyno may need a moment to start up)
 
 An online web app where you can play Where's Wally. Find Wally, Walda, Odlaw, Wizard and woof to log a highscore.
 
